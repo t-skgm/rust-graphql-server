@@ -6,3 +6,4 @@ description = "Learning Rust"
 
 [dependencies]
 iron = "0.6.0"
+router = "0.6.0"
