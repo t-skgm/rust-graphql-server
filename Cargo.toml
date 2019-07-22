@@ -1,0 +1,8 @@
+[package]
+name = "learning-rust"
+version = "0.1.0"
+authors = ["t-skgm <skgm0301@mail.com>"]
+description = "Learning Rust"
+
+[dependencies]
+iron = "0.6.0"

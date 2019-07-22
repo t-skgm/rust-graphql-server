@@ -1,0 +1,27 @@
+version: '3'
+services:
+  api:
+    container_name: api
+    build:
+      context: .
+    command: cargo run
+    volumes:
+      - .:/app
+      - ./tmp/.cargo/registry:/root/.cargo/registry
+      - ./tmp/.cache:/root/.cache
+    # depends_on:
+    #   - mysql
+    ports:
+     - "28000:8000"
+  # mysql:
+  #   image: mysql:5.7
+  #   container_name: mysql_dev
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: prisma
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - mysql:/var/lib/mysql
+volumes:
+  mysql:
